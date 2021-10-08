@@ -1,38 +1,115 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary-color: #333;
+  --text-primary: #f7c08a;
+  --secondary-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1000px;
+  background-color: #f4f4f4;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Navbar */
+
+#navbar {
+  background-color: #333;
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 7px;
+}
+
+#navbar h1 {
   text-align: center;
+  color: #fff;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Form */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#input-form {
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#input-form input {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  width: 40%;
+  border-radius: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#input-form button {
+  padding: 0 1rem;
+  border-radius: 7px;
+  margin-left: 12px;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Items */
+
+#items-container {
+  display: flex;
+  justify-content: center;
+}
+
+#items-container .items-box {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
+
+#items-container .items-box ul {
+  list-style: none;
+}
+
+#items-container .items-box ul li {
+  padding: 1rem 3rem;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Completed Tasks */
+
+.filled {
+  position: relative;
+  color: black;
+}
+
+.filled > hr {
+  color: orange;
+  background-color: #666;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: none;
+}
+
+.filled > input {
+  position: absolute;
+  left: 0;
+  transform: translateX(-45px);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
 }
